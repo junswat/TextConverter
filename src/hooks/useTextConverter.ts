@@ -28,7 +28,7 @@ export const deletionRules: DeletionRule[] = [
 export function useTextConverter() {
   const [inputText, setInputText] = useState('');
   const [activeSymbols, setActiveSymbols] = useState<Set<string>>(
-    new Set(defaultSymbols.map((s) => s.from))
+    new Set(['()']) // カッコのみを初期選択
   );
   const [activeDeletions, setActiveDeletions] = useState<Set<string>>(new Set());
 
